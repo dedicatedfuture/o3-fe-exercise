@@ -1,0 +1,29 @@
+body {
+	padding: 30px;
+	font-family: sans-serif;
+}
+
+header {
+	background: #cccccc;
+}
+section {
+	
+	background: #f8a707;
+	width: 75%;
+	float: right;
+	/*fixed the margin with negative pixels to align w/out changing width percentages or padding*/
+	margin: 0 -20px;
+}
+article {
+
+	background: white;
+	margin: 0 0 1rem 0;
+}
+aside {
+	background: #da11f5;
+	width: 25%;
+	float: left;
+}
+header, article, section, .module {
+	padding: 1rem;
+}

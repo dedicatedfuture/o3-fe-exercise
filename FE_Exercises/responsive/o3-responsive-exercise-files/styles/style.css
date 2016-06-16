@@ -1,0 +1,242 @@
+
+/*default styling working w/ mobile first intention*/
+* {
+	box-sizing: border-box; 
+}
+
+body {
+	font-family: "Trebuchet MS","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Tahoma,sans-serif;
+	background: #eeeeee;
+}
+.page-wrap {
+	margin: 0 auto;
+	background: #ffffff;
+}
+img {
+	display: block; 
+}
+
+a {
+	color: orange;
+}
+.main-story {
+	position: relative;
+	background-color: gray;
+	width: 90%;
+	margin: 0 auto;
+}
+.main-story img{
+	width: 100%;
+	margin: 0 auto;
+}
+.story-intro{
+	display: block;
+	padding: 0 5px 5px 15px;
+	color: white;
+}
+/*mobile specific sizing*/
+@media all and (max-width: 435px){
+.media{
+	width: 25%;
+
+}
+.sub-story{
+	display: flex;
+	justify-content: space-around;
+	align-items: flex-start;
+}
+.sub-story h2{
+	font-size: 125%;
+}
+.media{
+	flex-basis: 25%;
+	margin: 20px 20px;
+}
+.media img{
+	width: 80px;
+	height: 80px;
+}
+
+/*hamburger icon*/
+/*had some trouble making the icon act exactly as specified in the PDF, 
+tried my best to make it look good accross different screen sizes*/
+.menu-btn nav {
+ position: relative;
+ left: 100%;
+ top: 64%;
+ padding-right: 8px;
+ margin-top: -0.50em;
+ line-height: 1.2;
+ font-size: 18px;
+ font-weight: 200;
+ vertical-align: middle;
+ z-index: 99;
+}
+ 
+.menu-btn span {
+ display: block;
+ width: 30px;
+ height: 3px;
+ margin: 4px 0;
+ background: rgb(0,0,0);
+ z-index: 99;
+}
+ 
+.responsive-menu{
+ display: none;
+ width: 100%;
+ 
+}
+
+.responsive-menu ul{
+	list-style-type: none;
+	width: 100%;
+	background-color: gray;
+}
+.responsive-menu ul a {
+	text-decoration: none;
+	
+}
+ .responsive-menu ul li{
+ 	 padding: 5px 200px 5px 5px;
+ }
+.expand {
+ display: block !important; 
+ margin: 0 auto;
+}
+#menu-btn.open{
+	position: relative;
+    top: -50px;
+}
+#menu-btn.open span:nth-child(1) {
+  position: relative;
+  left: 277px;
+  width: 40px;
+  -webkit-transform: rotate(135deg);
+  -moz-transform: rotate(135deg);
+  -o-transform: rotate(135deg);
+  transform: rotate(135deg);
+}
+
+#menu-btn.open span:nth-child(2) {
+  opacity: 0;
+  left: -60px;
+}
+
+#menu-btn.open span:nth-child(3) {
+  position: relative;
+  left: 277px;
+  top: -12px;
+  width: 40px;
+  -webkit-transform: rotate(-135deg);
+  -moz-transform: rotate(-135deg);
+  -o-transform: rotate(-135deg);
+  transform: rotate(-135deg);
+}
+
+
+.topwrapper{
+	display: inline-block;
+}
+}
+
+
+/*larger than mobile version*/
+/*did not make a media query for tablets as the desktop version seemed to
+ look good on tablet size*/
+@media all and (min-width: 436px){
+
+.page-wrap {
+	width: 840px;
+	padding: 20px;
+}
+
+.main-story {
+	position: relative;
+	margin: 0 0 25px 0;
+}
+
+
+
+nav {
+	margin-bottom: 20px;
+	overflow: hidden;
+}
+
+nav ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+nav li {
+	float: left;
+	width: 160px;
+	border-left: 1px solid white;
+}
+
+nav li:first-child {
+	border-left: none;
+}
+
+nav a {
+	display: block;
+	padding: 10px;
+	text-align: center;
+	color: white;
+	background: orange;
+	text-decoration: none;
+}
+
+nav a:hover {
+	background: gray;
+}
+
+.story-intro {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	background: rgba(0, 0, 0, 0.75);
+	padding: 20px;
+	color: white;
+}
+
+h1 {
+	 font-size: 4em;
+}
+
+h1, h2 {
+	margin: 0 0 10px 0;
+}
+
+.story-intro h1 {
+	font-size: 2.5em; 
+}
+.story-intro p {
+	margin: 0;
+}
+
+.sub-stories {
+	overflow: hidden;
+}
+
+.sub-story {
+	float: left;
+	width: 250px;
+	margin-right: 25px;
+	position: relative;
+	font-size: 80%;
+}
+
+.sub-story-intro {
+	width: 100%;
+	background: rgba(0, 0, 0, 0.75);
+	padding: 20px;
+	color: white;
+}
+
+.last {
+	margin-right: 0;
+}
+}
